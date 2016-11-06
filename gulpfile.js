@@ -7,8 +7,6 @@ var del = require('del');
 var bower = require('main-bower-files');
 var normalizeBower = require('gulp-bower-normalize');
 
-gulp.task('start', ['serve']);
-
 gulp.task('serve', ['watch'], function (cb) {
 	browserSync.init({
 		server: {
