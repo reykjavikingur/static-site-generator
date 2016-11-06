@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var chalk = require('chalk');
 var browserSync = require('browser-sync');
+var sass = require('gulp-sass');
 var execFile = require('child_process').execFile;
 var del = require('del');
 var bower = require('main-bower-files');
@@ -20,9 +21,9 @@ gulp.task('clean', [], function () {
 	return del('dist/*');
 });
 
-gulp.task('watch', ['watch:static', 'watch:pages', 'watch:bower']);
+gulp.task('watch', ['watch:static', 'watch:styles', 'watch:pages', 'watch:bower']);
 
-gulp.task('build', ['build:static', 'build:pages', 'build:bower']);
+gulp.task('build', ['build:static', 'build:styles', 'build:pages', 'build:bower']);
 
 gulp.task('watch:static', ['build:static'], function () {
 	gulp.watch('src/static/**/*', ['build:static']);
@@ -31,6 +32,17 @@ gulp.task('watch:static', ['build:static'], function () {
 gulp.task('build:static', [], function () {
 	return gulp.src('src/static/**/*')
 		.pipe(gulp.dest('dist/assets'))
+		;
+});
+
+gulp.task('watch:styles', ['build:styles'], function () {
+	gulp.watch('src/styles/**/*.scss', ['build:styles']);
+});
+
+gulp.task('build:styles', [], function () {
+	return gulp.src('src/styles/**/*.scss')
+		.pipe(sass())
+		.pipe(gulp.dest('dist/assets/styles'))
 		;
 });
 

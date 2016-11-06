@@ -1,0 +1,14 @@
+@import 'vars';
+
+body {
+	background-color: $bg-color;
+	color: $main-color;
+	font-family: $main-font;
+}
+
+a, a:visited {
+	color: $link-color;
+}
+
+@import 'copyright';
+@import 'menu';

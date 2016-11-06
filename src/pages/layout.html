@@ -1,10 +1,14 @@
 <head>
 	<title>{{siteTitle}} | {{pageTitle}}</title>
+	<link rel="stylesheet" type="text/css" href="{{asset 'assets/styles/main.css' }}" />
 </head>
 <body>
 <h1>{{siteTitle}}</h1>
-<img width="100" src="{{asset 'assets/images/diamond-block.png' }}" />
+
+{{>menu}}
 
 <h2>{{pageTitle}}</h2>
 {{>@partial-block}}
+
+{{>copyright}}
 </body>

@@ -1,0 +1,10 @@
+nav {
+	a {
+		text-decoration: none;
+		padding: 0.5em;
+		
+		&.active {
+			text-decoration: underline;
+		}
+	}
+}
