@@ -20,5 +20,10 @@ This will start a local web server on an available port and watch your files for
 
 ## Files
 
-TBD
+* `src/pages/**/*.html` are the Handlebars templates and are compiled to `dist`
+* `src/styles/**/*.scss` are the SASS files and are compiled to `dist/assets/styles`
+* `src/static/**/*` are the static files and are compiled to `dist/assets`
 
+## Bower
+
+External third-party script dependencies can be managed with Bower and are copied to `dist/assets/vendor`
