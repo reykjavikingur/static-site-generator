@@ -1,0 +1,20 @@
+{
+  "name": "handlebars-documentation",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Andrew Strader <astrader@resourceammirati.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
