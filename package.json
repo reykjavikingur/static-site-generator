@@ -8,6 +8,10 @@
     "build": "gulp clean && gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reykjavikingur/static-site-generator.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
